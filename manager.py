@@ -15,7 +15,7 @@ def readPasswords():
     print(file.read())
     # TODO - make this better / have more functionality
 
-os.system('cls')
+os.system('clear' if os.name =='posix' else 'cls')
 print("M64 Password Management System ----------")
 print("1. Generate new password")
 print("2. View passwords")
@@ -26,14 +26,15 @@ while choice != 3:
 
     if choice == '1':
         length = input("How many characters should the password be? ")
+        if int(length) < 4:
+            print("How about you come back when you have a real request?")
+            break
         password = generate(length)
 
         choice = input("Would you like to save this password? (Y/N): ")
         if choice == 'y' or choice == 'Y':
             name = input("What website is this password for? ")
             savePassword(name, password)
-        else:
-            send_password_to_me_OwO(password)
         break
 
     elif choice == '2':
