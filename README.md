@@ -1,6 +1,9 @@
 # M64 Password Management System
 I got tired of creating and remembering passwords for all the accounts I have to create for all the internships I apply for, so here's my simple solution, written in Python.
 
+![image](https://user-images.githubusercontent.com/56841654/150452081-380dc2f0-d990-413d-982f-fd8a35f6a089.png)
+As you can see this creates VERY strong passwords, guaranteed!!!
+
 <h2>Current functionality:</h2> 
 <ul>
     <li>you input how long you want the password, it gives it to you</li>
@@ -17,3 +20,5 @@ I got tired of creating and remembering passwords for all the accounts I have to
 ***
 
 <h1>Make sure to smash that star button and watch for any updates!!!</h1>
+
+
