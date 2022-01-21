@@ -22,7 +22,7 @@ print("2. View passwords")
 print("3. Exit program")
 choice = input(": ")
 
-while choice != 3:
+while True:
 
     if choice == '1':
         length = input("How many characters should the password be? ")
@@ -39,7 +39,7 @@ while choice != 3:
 
     elif choice == '2':
         readPasswords()
-        break
+        choice = input(": ")
 
     elif choice == '3':
         print("goodbye!")
