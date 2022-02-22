@@ -15,6 +15,7 @@ As you can see this creates VERY strong passwords, guaranteed!!!
     <li> a BETTER management application that keeps track of the password and the website associated to it</li>
     <li>a gui for all this</li>
     <li> a .exe file</li>
+    <li> convert this into a C program using Python as the GUI that calls the C functions </li>
 </ul>
 
 ***
