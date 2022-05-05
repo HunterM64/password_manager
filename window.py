@@ -1,16 +1,31 @@
 import tkinter as tk
+from tkinter import ttk
+import generator as gen
+
+def display_text():
+    global entry
+    string = entry.get()
+    print(string)
+    
+    password = gen.generate(string)
+    print(password)
+    
+    win2 = tk.Tk()
+    win2.title("Password Generated")
+    label2 = tk.Label(win2, text = password)
+    label2.pack()
+
+    
 
 window = tk.Tk()
 
-title = tk.Label(text = "M64's Password Generator")
-title.pack()
+label = tk.Label(window, text="Enter length for password:")
+label.pack()
 
-def open_popup():
-    top = tk.Toplevel()
-    top.title("Generated Password")
-    tk.Label(top, text = "Your password is: ").pack()
+entry = tk.Entry(window)
+entry.focus_set()
+entry.pack()
 
-generate = tk.Button(text = "Generate Password", command = open_popup)
-generate.pack()
+ttk.Button(window, text="OK", command= display_text).pack()
 
 window.mainloop()

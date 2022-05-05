@@ -4,6 +4,7 @@ import random
 import pyperclip as pc
 possible_chars = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 
+""" generates a password of characters equalling to given length """
 def generate(length):
     
     assword = random.choice(possible_chars)
@@ -16,24 +17,22 @@ def generate(length):
     for c in assword:
         if c in string.ascii_lowercase:
             lower = True
-        elif c in string.ascii_uppercase:
+        if c in string.ascii_uppercase:
             upper = True
-        elif c in string.digits:
+        if c in string.digits:
             digit = True
-        elif c in "!@#$%^&*()":
+        if c in "!@#$%^&*()":
             special = True
 
-    # if there isn't one of each, generate new password
-    if (not lower or not upper or not digit or not special):
-        generate(length)
-    else:
-        print("Your password is: " + assword)
-    
-        # copy password to clipboard
-        pc.copy(assword)
-        print("This has been copied to your clipboard.")
+    print(lower and upper and digit and special)
 
+    if (lower and upper and digit and special):
+        # done
+        pc.copy(assword)
         return assword
+    else:
+        # try again
+        return generate(length)
 
     
 
