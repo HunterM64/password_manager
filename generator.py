@@ -1,7 +1,6 @@
 from operator import truediv
 import string
 import random
-import pyperclip as pc
 possible_chars = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 
 """ generates a password of characters equalling to given length """
@@ -24,11 +23,8 @@ def generate(length):
         if c in "!@#$%^&*()":
             special = True
 
-    print(lower and upper and digit and special)
-
     if (lower and upper and digit and special):
         # done
-        pc.copy(assword)
         return assword
     else:
         # try again
