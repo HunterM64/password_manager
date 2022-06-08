@@ -1,2 +1,5 @@
 # ignore pycache
 __pycache__/
+
+# ignore passwords lol
+.super_secure_password_file
