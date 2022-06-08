@@ -56,8 +56,6 @@ def view_passwords():
         label = tk.Label(winPass, text = website + ": " + passwordDict[website])
         label.pack(padx = 10, pady = 1, anchor = "w")
 
-
-
 # Setup Window
 winMain = tk.Tk()
 winMain.geometry("250x100")
