@@ -1,12 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
 import generator as gen
+from manager import savePassword, readPasswords
 
 def get_length():
     
     # Setup window 
     winLength = tk.Tk()
-    winLength.geometry("200x100")
+    winLength.geometry("200x120")
     winLength.title("Generator")
 
     # Setup label
@@ -18,12 +19,21 @@ def get_length():
     entry.focus_set()
     entry.pack()
 
-    # Submit button
-    ttk.Button(winLength, text="OK", command= lambda: display_password(entry)).pack()
+    labelWebsite = tk.Label(winLength, text="Enter website for password:")
+    labelWebsite.pack()
 
-def display_password(length_var):
+    entry2 = tk.Entry(winLength)
+    entry2.pack()
+
+    
+
+    # Submit button
+    ttk.Button(winLength, text="OK", command= lambda: [display_password(entry, entry2), winLength.destroy()]).pack()
+
+def display_password(length_var, website_var):
 
     length = length_var.get()
+    website = website_var.get()
     
     password = gen.generate(length)
     
@@ -31,16 +41,22 @@ def display_password(length_var):
     winDisp.geometry("200x100")
     winDisp.title("Password")
 
-    labelDisp = tk.Label(winDisp, text = "Password generated:\n" + password)
+    labelDisp = tk.Label(winDisp, text = "Password Generated:\n" + password)
     labelDisp.place(anchor = "center", relx = 0.5, rely = 0.5)
+
+    ttk.Button(winDisp, text = "Click to Save Password", command = lambda: [savePassword(website, password), winDisp.destroy()]).place(anchor = "center", relx = 0.5, rely = 0.9)
 
 def view_passwords():
     winPass = tk.Tk()
-    winPass.geometry("200x100")
     winPass.title("Passwords")
 
-    labelPass = tk.Label(winPass, text = "TODO")
-    labelPass.place(anchor = "center", relx = 0.5, rely = 0.5)
+    passwordDict = readPasswords()
+
+    for website in passwordDict:
+        label = tk.Label(winPass, text = website + ": " + passwordDict[website])
+        label.pack(padx = 10, pady = 1, anchor = "w")
+
+
 
 # Setup Window
 winMain = tk.Tk()
