@@ -5,19 +5,36 @@ I got tired of creating and remembering passwords for all the accounts I have to
 
 As you can see this creates VERY strong passwords, guaranteed!!![^1]
 
+
+# Dependencies
+
+If you aren't using the `.exe` file, you might need to install some dependencies. 
+
+Tkinter can be installed by running
+
+```bash
+pip install tk
+```
+
+If you're on Mac, I just went through that process myself but I don't remember all of it, so good luck. It's something along the lines of 
+```zsh
+brew install python
+brew install python-tk
+pip3 install tk
+```
+
 # Usage
+
 To run the program, run command 
 ```bash
 python3 window.py
 ```
-There might also be a `.exe` file in the releases tab. 
+There might also be a `.exe` file in the releases tab for you Windows users.
 
 # TODO 
+
 <ul>
-<li>update the readme when I'm "done" again</li>
 <li>some kind of encryption</li>
 </ul>
-
----
 
 [^1]: results may vary
