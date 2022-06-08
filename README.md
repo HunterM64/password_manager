@@ -3,22 +3,21 @@ I got tired of creating and remembering passwords for all the accounts I have to
 
 ![image](https://user-images.githubusercontent.com/56841654/150452081-380dc2f0-d990-413d-982f-fd8a35f6a089.png)
 
-As you can see this creates VERY strong passwords, guaranteed!!!
+As you can see this creates VERY strong passwords, guaranteed!!![^1]
 
-<h2>Current functionality:</h2> 
+# Usage
+To run the program, run command 
+```bash
+python3 window.py
+```
+There might also be a `.exe` file in the releases tab. 
+
+# TODO 
 <ul>
-    <li>you input how long you want the password, it gives it to you</li>
-    <li>it copies said password to your clipboard</li>
-    <li>something of a management application</li>
-</ul>
-<h2>Planned functionality:</h2> 
-<ul>
-    <li> a BETTER management application that keeps track of the password and the website associated to it</li>
-    <li>a gui for all this</li>
-    <li> a .exe file</li>
-    <li> Securely store the passwords or something </li>
+<li>update the readme when I'm "done" again</li>
+<li>some kind of encryption</li>
 </ul>
 
-***
+---
 
-<h1>Make sure to smash that star button and watch for any updates!!!</h1>
+[^1]: results may vary
